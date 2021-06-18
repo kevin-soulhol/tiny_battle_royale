@@ -1,29 +1,33 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import Participants from "../components/participants"
 import Seo from "../components/seo"
+
+import "../styles/main.scss"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <section id="presentation">
+      <div className="background"></div>
+      <h2>
+        <span className="tiny">Tiny</span>
+        <span className="battle">Battle</span>
+        <span className="royale">Royale</span>
+      </h2>
+
+      <div className="ligne_cta">
+        <h3>Choisissez les participants puis lancez-les dans l'arène. Survivront-ils ? Combien de temps ? Tout peut arriver dans Tiny Battle Royale !</h3>
+        <button>JOUER</button>
+      </div>
+    </section>
+
+    <Participants />
   </Layout>
 )
 
 export default IndexPage
+
+
+

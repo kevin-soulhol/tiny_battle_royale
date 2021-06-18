@@ -1,0 +1,28 @@
+header{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+
+        ul{
+                display: flex;
+                flex-direction: row;
+
+                li{
+                        margin:0px 3em;
+                        transition: all 0.2s ease-in-out;
+
+
+                        &:hover{
+                                text-decoration: underline;
+                        }
+                }
+        }
+
+}

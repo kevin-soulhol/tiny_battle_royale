@@ -1,0 +1,30 @@
+.img_player{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 250px;
+    height: 350px;
+    border: 1px solid red;
+
+    .bg_player{
+        position: absolute;
+        z-index: 0;
+        width: 110%;
+        height: 110%;
+        object-fit: cover;
+    }
+
+    .close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
