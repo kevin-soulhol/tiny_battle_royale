@@ -6,9 +6,9 @@ import CloseCross from '../components/mini_components/close_cross'
 
 const Imgplayer = (props) => {
 
-    console.log(props);
+  console.log(props);
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "perso/h001.jpg" }) {
         childImageSharp {
@@ -21,21 +21,23 @@ const Imgplayer = (props) => {
   `)
 
 
-    const IMG = data.placeholderImage.childImageSharp.fluid
-  
+  const IMG = data.placeholderImage.childImageSharp.fluid
 
 
-    console.log("IMG");
-    console.log(IMG.src);
 
-    
-    return (
-        <div className="img_player">
-            <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-            <div className="close"><CloseCross /></div>
-            <div className="name_player">John</div>
-        </div>
-    );
+  console.log("IMG");
+  console.log(IMG.src);
+
+
+  return (
+    <div className="img_player">
+      <div className="containImg">
+        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      </div>
+      <div className="close"><CloseCross /></div>
+      <div className="name_player">John</div>
+    </div>
+  );
 };
 
 export default Imgplayer;
