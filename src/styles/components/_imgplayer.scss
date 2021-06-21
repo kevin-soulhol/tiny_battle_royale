@@ -1,3 +1,16 @@
+@keyframes appear { 
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
 .img_player{
     position: relative;
     display: flex;
@@ -13,6 +26,9 @@
     font-size: 1.2em;
     text-transform: uppercase;
 
+    transition: all 0.2s ease-in-out;
+
+    animation:appear 0.2s linear 1;
 
     .containImg{
         position: relative;
@@ -25,6 +41,7 @@
         overflow: hidden;
 
         transform: rotate(1deg) skew(2deg);
+        opacity: 0.8;
 
         .gatsby-image-wrapper{
             width: 110%;
@@ -32,6 +49,17 @@
             object-fit: cover;
             transform: rotate(-1deg) skew(-2deg);
         }
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    .name_player{
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        max-width: 250px;
     }
 
     .close{
@@ -44,5 +72,27 @@
         &:hover{
             transform: scale(1.1);
         }
+    }
+}
+
+.img_player.add{
+
+    order: 1;
+    transition: transform 0.2s ease;
+
+    .containImg{
+        border: 3px dotted grey;
+        color: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        text-align: center;
+
+        font-family: 3em;
+    }
+
+    &:hover{
+        transform: scale(1.1);
     }
 }

@@ -1,48 +1,59 @@
-import React from 'react';
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from 'react';
 import Img from "gatsby-image"
 
 import CloseCross from '../components/mini_components/close_cross'
 
 const Imgplayer = (props) => {
 
-  console.log(props);
-
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "perso/h001.jpg" }) {
-        childImageSharp {
-          fluid(quality: 10, maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-
-  const IMG = data.placeholderImage.childImageSharp.fluid
+  const ADD = props.add ? true : false
+  const img_fluid = props.fluid
 
 
 
-  console.log("IMG");
-  console.log(IMG.src);
+  const add_players = () => {
+    props.adder()
+  }
+
+  const delete_players = () => {
+    props.deleter(props.index)
+  }
+
+  const handleChange = (e) => {
+    props.changerName(props.index, e.target.value)
+  }
+
+  const handleClickImage = () => {
+    props.openerImage(props.index)
+  }
 
 
-  return (
-    <div className="img_player">
-      <div className="containImg">
-        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  if (!ADD) {
+    return (
+      <div className="img_player">
+        <div
+          className="containImg"
+          onClick={handleClickImage}>
+          <Img fluid={img_fluid} />
+        </div>
+        <div className="close" onClick={delete_players}><CloseCross /></div>
+        <input
+          className="name_player"
+          type="text" value={props.nom}
+          placeholder="Quel nom ?"
+          onChange={handleChange} />
       </div>
-      <div className="close"><CloseCross /></div>
-      <div className="name_player">John</div>
-    </div>
-  );
+    )
+  } else {
+    return (
+
+      <div className="img_player add" onClick={add_players}>
+        <div className="containImg">
+          +<br />Ajouter un joueur
+        </div>
+      </div>
+    )
+  }
+
 };
 
 export default Imgplayer;
-
-/*
-
-            <div className="bg_player"  style={{backgroundImage:IMG.src}}></div>
-            */
