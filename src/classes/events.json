@@ -884,6 +884,52 @@
             }
         }
     ],
+    "end_lovers": [
+        {
+            "on": "CHARME",
+            "diff": 99,
+            "name": "L'amour sous les étoiles",
+            "desc": "Mais que vois-je !? Le dernier groupe survivant est amoureux ! Ils essaient de convaincre la foule, les sponsors et les créateurs en se suicidant avec des baies empoisonnées !",
+            "text_gr": {
+                "crit_win": [
+                    "Juste avant d'avaler les baies, la sirène de fin est sonnée ! Le couple est sauvé et remporte la Battle !!"
+                ],
+                "win": [
+                    "Juste avant d'avaler les baies, la sirène de fin est sonnée ! Le couple est sauvé et remporte la Battle !!"
+                ],
+                "lose": [
+                    "Ils avalent les baies en espérant que la sirène de fin sonne..."
+                ],
+                "crit_lose": [
+                    "Les baies sont avalées, pas en même temps, et dans un désordre de gênance, le couple meurt..."
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "WIN",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "WIN",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -99
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -99
+                },
+                "death": [
+                    "Mort par les baies empoisonnées"
+                ],
+                "death_gr": [
+                    "Morts par les baies empoisonnées"
+                ]
+            }
+        }
+    ],
     "starter": [
         {
             "on": "FIGHT",
@@ -1363,7 +1409,7 @@
                     "prennent un coup de chaud mais réussissent à courir plus vite que la lave"
                 ],
                 "lose": [
-                    "s'étouffnte en partie avec la cendre",
+                    "s'étouffent en partie avec la cendre",
                     "évitent la lave mais prend un coup de chaud terrible",
                     "ne peuvent éviter tous les morceaux de roches qui tombent du ciel"
                 ],
