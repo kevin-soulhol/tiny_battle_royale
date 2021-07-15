@@ -4,8 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    margin-bottom: 2em;
+    padding-bottom: 6em;
+    position: relative;
+
+    @media screen and (max-width: 1055px) {
+        padding-bottom: 10em;
+    }
 
     .background{
         width: 100%;
@@ -14,12 +18,35 @@
         z-index: -1;
         top: -55px;
         background: rgb(242,125,22);
-        background: radial-gradient(circle, rgba(242,125,22,1) 0%, rgba(217,41,73,1) 100%);
+        background: $backgroundradiant;
         transform: skew(0, 3deg);
+
+        @media screen and (min-width: 1055px) {
+            height: 100%;
+        }
+
     }
 
 
     h2{
+
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 6vw;
+        margin-bottom: -1em;
+
+        @media screen and (max-width: 600px) {
+            margin-top: -5vw;
+        }
+
+        @media screen and (max-width: 1055px) {
+            margin-top: 100px;
+        }
+
+        @media screen and (min-width: 1410px) {
+            margin-top: 150px;
+        }
+
         span{
             display: block;
             margin: auto;
@@ -28,29 +55,44 @@
             overflow: hidden;
             text-overflow: clip;
             word-wrap: normal;
+            width: 115vw;
+            padding-left: 15%;
         }
         
         .tiny{
-            font-size: 58px;
+            font-size: 5vw;
             text-align: left;
-            width: 50%;
+            letter-spacing: -0em;
         }
 
         .battle{
-            font-size: 117px;
+            font-size: 8vw;
             text-align: left;
-            width: 50%;
             transform: rotate(0.7deg);
             margin-bottom: 10px;
             margin-top: -0.2em;
+
         }
 
         .royale{
-            font-size: 361px;
-            letter-spacing: -0.1em;
-            width: 1300px;
+            display: block;
+            position: relative;
+            left: -11vw;
+            width: 115vw;
+            font-size: 26vw;
+            text-align: center;
+            padding-left: 0;
+            letter-spacing: -0.07em;
+
+            @media screen and (min-width: 1380px) {
+                left : -51%;
+                width: 200%;
+            }
+
         }
     }
+
+
 
 
     .ligne_cta{
@@ -60,6 +102,23 @@
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        padding: 0 2em ;
+
+        @media screen and (max-width: 943px) {
+            margin-top: 2em;
+        }
+
+        @media screen and (max-width: 530px) {
+            flex-direction: column;
+
+            h3{
+                text-align: center;
+            }
+
+            button{
+                margin-top: 1em;
+            }
+        }
 
     }
 
@@ -67,9 +126,12 @@
         text-align: right;
         font-size: 1em;
         padding-right: 2em;
-        width: 50%;
+        width: 100%;
         margin: 0;
+
     }
+
+
 
 
 }
@@ -83,19 +145,47 @@
     align-items: center;
     color: $black;
 
+    @media (max-width:800px){
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
     .contain_players{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
 
         width: 100%;
         overflow: hidden;
+
     }
 
     button{
-        background-color: $red;
+        background: $backgroundradiant;
     }
+
+    .soustitre_btn{
+        color: $red;
+        margin-top: 1em;
+    }
+
+    h4{
+        text-align: right;
+        max-width: 1000px;
+    }
+
+
+}
+
+
+#descriptiontinybattle{
+    padding: 1em;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    max-width: $containermax;
+    margin: auto;
 
 
 }

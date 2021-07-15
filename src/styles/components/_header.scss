@@ -7,6 +7,7 @@ header{
         padding: 1em;
         position: absolute;
         top: 0;
+        z-index: 50;
         width: 100%;
 
 
@@ -18,9 +19,17 @@ header{
                         margin:0px 3em;
                         transition: all 0.2s ease-in-out;
 
+                        
+
 
                         &:hover{
                                 text-decoration: underline;
+                        }
+
+
+                        @media screen and (max-width: 535px) {
+                                margin:0px 0.7em;
+
                         }
                 }
         }

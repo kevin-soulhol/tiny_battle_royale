@@ -1,0 +1,27 @@
+.headergame{
+
+    position: relative;
+    padding: 1em;
+    overflow: hidden;
+    padding-bottom: 10%;
+
+    display: flex;
+    justify-content: flex-end;
+
+
+    .background{
+        background: $backgroundradiant;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: -50%;
+        left: 0;
+        z-index: -1;
+        background: linear-gradient(-45deg, #EE7752, #E73C7E);
+
+        transform: skew(0, 5deg);
+    }
+
+
+    
+}

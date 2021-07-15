@@ -1,0 +1,24 @@
+.assistance{
+
+    overflow: unset;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        margin: auto;
+
+        label{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 0.7em;
+        }
+
+        button{
+            margin-top: 1em;
+        }
+    }
+}

@@ -5,11 +5,6 @@ const displayAllImagePlayers = (props) => {
     const allImage = props.data
 
 
-    const handleClick = () => {
-        //props.changerImage(props.indexPlayer, img.node.childrenImageSharp[0].fluid)
-    }
-
-
     return (
         <div className="allImagePlayers">
             {allImage.map((img) => (

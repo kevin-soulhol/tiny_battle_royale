@@ -1,0 +1,28 @@
+#appGame{
+    display: flex;
+    flex-direction: column;
+
+    .message{
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .nextDay{
+        margin:auto;
+        margin-top: 3em;
+        background-color: $red;
+    }
+
+    .night{
+        background-color: $darkblue;
+    }
+
+    .container_btns_endgame{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+        margin-top: 4em;
+    }
+
+}

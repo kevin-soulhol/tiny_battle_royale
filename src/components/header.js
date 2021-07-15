@@ -1,9 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import Logo from "../components/mini_components/Logo"
+
+
 const Header = () => (
   <header>
-    <h1><Link to="/"><div>Tiny</div><div>Battle</div></Link></h1>
+    <Logo />
     <ul className="menu">
       <li><Link to="/about">A propos</Link></li>
       <li><Link to="/assistance">Assistance</Link></li>

@@ -1,0 +1,1402 @@
+{
+    "main": [
+        {
+            "on": "SURVIE",
+            "diff": 13,
+            "text": {
+                "crit_win": "construit une super cachette dans un arbre",
+                "win": "trouve refuge dans un arbre",
+                "lose": "essaie de s'installer dans un arbre mais n'arrive pas à grimper",
+                "crit_lose": "tente de grimper dans un arbre, glisse et tombe"
+            },
+            "text_gr": {
+                "crit_win": "fabriquent une super cachette dans un arbre",
+                "win": "trouvent refuge dans un arbre",
+                "lose": "essaient de s'installer dans un arbre mais n'arrivent pas à s'entraider pour grimper",
+                "crit_lose": "tentent de grimper dans un arbre, mais il est bien trop glissant et l'un d'eux tombent"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "death": "a chuté d'un arbre bien trop haut"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 15,
+            "text": {
+                "crit_win": "trouve une superbe grotte et prend un bon repos",
+                "win": "trouve refuge dans une grotte derrière une belle cascade",
+                "lose": "va devoir passer la nuit sous les étoiles",
+                "crit_lose": "trouve une grotte. Malheureusement, c'était déjà le refuge d'un ours, qui, pour se venger, donne de grands coups de pattes"
+            },
+            "text_gr": {
+                "crit_win": "trouvent une superbe grotte qui leur permettent de prendre un bon repos",
+                "win": "trouvent refuge dans une grotte derrière une belle cascade",
+                "lose": "vont devoir passer la nuit sous les étoiles",
+                "crit_lose": "trouvent une grotte. Malheureusement, c'était déjà le refuge d'un ours, qui, pour se venger, donne de grands coups de pattes au groupe"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 3
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -3
+                },
+                "death": "n'a pas tenu la nuit."
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 15,
+            "text": {
+                "crit_win": "arrive à fabriquer une cabane de qualité pour s'y reposer dedans",
+                "win": "trouve de quoi faire une petite cabane pour passer la nuit",
+                "lose": "va devoir passer la nuit sous les étoiles",
+                "crit_lose": "fabrique une cabane qui s'écroule finalement pendant son sommeil"
+            },
+            "text_gr": {
+                "crit_win": "arrivent à fabriquer une cabane de qualité pour s'y reposer dedans",
+                "win": "trouvent de quoi faire une petite cabane pour passer la nuit",
+                "lose": "vont devoir passer la nuit sous les étoiles, collés serrés",
+                "crit_lose": "fabriquent une cabane qui s'écroule finalement leur sommeil"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "death": "s'est épuisé en essayant tant bien que mal de sortir de sous la cabane"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 10,
+            "text": {
+                "crit_win": "trouve de délicieuses baies au bon goût sucré qui remonte le moral",
+                "win": "met la main sur de petites baies noires",
+                "lose": "trouve des baies qui ne semblent pas être aussi bonnes que prévues",
+                "crit_lose": "trouve des baies magnifiques et délicieuses mais qui déclenchent un terrible maux de ventre"
+            },
+            "text_gr": {
+                "crit_win": "trouvent de délicieuses baies au bon goût sucré qui remonte leur moral",
+                "win": "mettent la main sur de petites baies noires",
+                "lose": "trouvent des baies qui ne semblent pas être aussi bonnes que prévues",
+                "crit_lose": "trouvent des baies magnifiques et délicieuses mais qui déclenchent de terribles maux de ventre"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "death": "est victime de sa gourmandise, les baies étant bien plus mortelles que prévues"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 12,
+            "text": {
+                "crit_win": "pêche de gros poissons dans un lac",
+                "win": "pêche quelques poissons",
+                "lose": "tente de pêcher avec un semblant de canne mais ça ne semble pas fonctionner",
+                "crit_lose": "tombe dans l'eau en essayant de pêcher"
+            },
+            "text_gr": {
+                "crit_win": "pêchent de gros poissons dans un lac",
+                "win": "pêchent quelques poissons",
+                "lose": "tentent de pêcher avec un semblant de canne mais ça ne semble pas fonctionner",
+                "crit_lose": "tombent dans l'eau en essayant de pêcher"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "death": "a sombré au fond de l'eau"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 10,
+            "text": {
+                "crit_win": "tombe sur toute une colonie de moule au bord de la mer",
+                "win": "trouve quelques moules sur le bord de la mer",
+                "lose": "a trouvé des moules au bord de la mer mais ne trouve aucun moyen de les ouvrir",
+                "crit_lose": "se coupe le doigt en essayant d'ouvrir une moule trouvée près de la mer"
+            },
+            "text_gr": {
+                "crit_win": "tombent sur toute une colonie de moule au bord de la mer",
+                "win": "trouvent quelques moules sur le bord de la mer",
+                "lose": "ont trouvé des moules au bord de la mer mais ne trouvent aucun moyen de les ouvrir",
+                "crit_lose": "se coupent les doigts en essayant d'ouvrir des moules trouvées près de la mer"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "death": "a perdu tout son sang après s'être coupé sur la moule. Triste fin"
+            }
+        },
+        {
+            "on": "FIGHT",
+            "diff": 20,
+            "text": {
+                "crit_win": "fait face à un ours monstrueux mais, grâce à sa force, le met à terre et le dépèce",
+                "win": "arrive à mettre à terre un ours qui finit par s'enfuir",
+                "lose": "tombe sur un ours qui l'oblige à s'enfuir",
+                "crit_lose": "se retrouve face à un ours qui réussi à lui mettre un coup de griffe"
+            },
+            "text_gr": {
+                "crit_win": "font face à un ours monstrueux mais, grâce à leur force, ils le mettent à terre et le dépècent",
+                "win": "arrivent à effrayer un ours qui finit par s'enfuir",
+                "lose": "tombent sur un ours qui les obligent à s'enfuir",
+                "crit_lose": "se retrouvent face à un ours qui réussi à leur mettre de nombreux coups de griffe"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 3
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -3
+                },
+                "death": "s'est fait arracher la tête par l'ours"
+            }
+        },
+        {
+            "on": "CHANCE",
+            "diff": 0,
+            "text": {
+                "crit_win": "prend le temps d'admirer le coucher de soleil",
+                "win": "se repose au bord de l'eau lors du coucher de soleil",
+                "lose": "rate un superbe coucher de soleil",
+                "crit_lose": "aurait pu profiter d'un super coucher de soleil sans tous ces nuages"
+            },
+            "text_gr": {
+                "crit_win": "prennent le temps d'admirer le coucher de soleil",
+                "win": "se reposent au bord de l'eau lors du coucher de soleil",
+                "lose": "ratent un superbe coucher de soleil",
+                "crit_lose": "auraient pu profiter d'un super coucher de soleil sans tous ces nuages"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "",
+                    "number": 0
+                }
+            }
+        },
+        {
+            "on": "CHANCE",
+            "diff": 15,
+            "text": {
+                "crit_win": "trouve un superbe arc et des flèches dans une cabane abandonnée",
+                "win": "trouve un vieil arc",
+                "lose": "essaie de fabriquer un arc mais n'y arrive pas",
+                "crit_lose": "trouve un arc mais ne trouve aucune flèche qui soit utile."
+            },
+            "text_gr": {
+                "crit_win": "trouvent un superbe arc et des flèches dans une cabane abandonnée",
+                "win": "trouvent un vieil arc",
+                "lose": "essaient de fabriquer un arc mais n'y arrive pas",
+                "crit_lose": "trouvent un arc mais ne trouvent aucune flèche qui soit utile."
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "DEGAT",
+                    "number": 4
+                },
+                "win": {
+                    "carac": "DEGAT",
+                    "number": 2
+                },
+                "lose": {
+                    "carac": "",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "",
+                    "number": 0
+                }
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 12,
+            "text": {
+                "crit_win": "arrive à débusquer toute une colonie de lapins",
+                "win": "attrape un lapin dans un de ses colets",
+                "lose": "trouve un colet vide",
+                "crit_lose": "attrape un lapin dans un colet mais cela attire un loup. Le combat s'engage"
+            },
+            "text_gr": {
+                "crit_win": "arrivent à débusquer toute une colonie de lapins",
+                "win": "attrapent un lapin dans un de ses colets",
+                "lose": "trouvent un colet vide",
+                "crit_lose": "attrapent un lapin dans un colet mais cela attire un loup. Le combat s'engage"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -3
+                },
+                "death": "a fait le bonheur de l'estomac d'un loup"
+            }
+        },
+        {
+            "on": "FORCE",
+            "diff": 7,
+            "text": {
+                "crit_win": "a failli attraper un rhume. Mais finalement, ce n'était qu'une toux",
+                "win": "a attrapé un rhume. Rien de grave",
+                "lose": "a attrapé un rhume. C'est peut-être grave",
+                "crit_lose": "a attrapé un bon rhume... ou alors la peste"
+            },
+            "text_gr": {
+                "crit_win": "ont failli attraper un rhume. Mais finalement, ce n'était qu'une toux",
+                "win": "se partagent un petit rhume. Rien de grave",
+                "lose": "se partagent un rhume. C'est peut-être grave",
+                "crit_lose": "se partagent un sacré rhume... ou alors c'est bien pire..."
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -14
+                },
+                "death": "a finalement découvert d'énormes pustules sur son corps. Ce n'était pas qu'un rhume",
+                "death_gr": "ont finalement succombé à une maladie bien plus grave : la peste"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 10,
+            "text": {
+                "crit_win": "trouve une ruche vide mais pleine de miel. Miam",
+                "win": "fait tomber un nid d'abeille mais arrive à échapper à l'essaim",
+                "lose": "se retrouve attaquer par un essaim d'abeille. Ca pique",
+                "crit_lose": "prend une ruche sur le visage, en se reposant sous un arbre. L'essaim s'énerve violemment"
+            },
+            "text_gr": {
+                "crit_win": "trouvent une ruche vide mais pleine de miel. Miam",
+                "win": "font tomber un nid d'abeille mais arrivent à échapper à l'essaim",
+                "lose": "se retrouvent attaquer par un essaim d'abeille. Ca pique",
+                "crit_lose": "prennent une ruche sur le visage, en se reposant sous un arbre. L'essaim s'énerve violemment"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -5
+                },
+                "death": "n'a pas survécu à ces millions de piqures d'abeille",
+                "death_gr": "n'ont pas survécu à ces millions de piqures d'abeille"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 15,
+            "text": {
+                "crit_win": "trouve une trousse de médecines (médicaments, instruments, pansements, etc)",
+                "win": "trouve des médicaments",
+                "lose": "trouve une boîte de médicaments. Mais elle est finalement vide",
+                "crit_lose": "trouve des médicaments"
+            },
+            "text_gr": {
+                "crit_win": "trouvent une trousse de médecines (médicaments, instruments, pansements, etc)",
+                "win": "trouvent des médicaments",
+                "lose": "trouvent une boîte de médicaments. Mais elle est finalement vide",
+                "crit_lose": "trouvent des médicaments. Mais en les prenant, ils se rendent compte que c'est très périmé"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 4
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "lose": {
+                    "carac": "",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -5
+                },
+                "death": "en prenant des médicaments, s'écroule. Ils étaient visiblement passés.",
+                "death_gr": "en prenant des médicaments, s'écroulent. Ils étaient visiblement passés."
+            }
+        },
+        {
+            "on": "CHARME",
+            "diff": 15,
+            "text": {
+                "crit_win": "a complètement subjugué le public et reçoit tout un pack de médicament",
+                "win": "convainct un sponsor d'envoyer des médicaments grâce à son charme",
+                "lose": "a intéressé les sponsors, mais pas suffisament pour mériter une dépense quelconque",
+                "crit_lose": "n'intéresse aucun sponsor et le public ne l'apprécie pas"
+            },
+            "text-gr": {
+                "crit_win": "ont complètement subjugué le public et reçoivent tout un pack de médicament",
+                "win": "convainquent un sponsor d'envoyer des médicaments grâce à leur charme",
+                "lose": "ont intéressé les sponsors, mais pas suffisament pour mériter une dépense quelconque",
+                "crit_lose": "n'intéressent aucun sponsor et le public ne l'apprécient pas"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 4
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "CHARME",
+                    "number": -1
+                },
+                "crit_lose": {
+                    "carac": "CHARME",
+                    "number": -2
+                },
+                "death": ""
+            }
+        },
+        {
+            "on": "CHARME",
+            "diff": 17,
+            "text": {
+                "crit_win": "a complètement subjugué le public et reçoit tout un pack d'armes lourdes",
+                "win": "convainct un sponsor d'envoyer une arme de poing grâce à son charme",
+                "lose": "a intéressé les sponsors, mais pas suffisament pour mériter une dépense quelconque",
+                "crit_lose": "n'intéresse aucun sponsor et le public ne l'apprécie pas"
+            },
+            "text_gr": {
+                "crit_win": "ont complètement subjugué le public et reçoivent tout un pack d'armes lourdes",
+                "win": "convainquent un sponsor d'envoyer une arme de poing grâce à leur charme",
+                "lose": "ont intéressé les sponsors, mais pas suffisament pour mériter une dépense quelconque",
+                "crit_lose": "n'intéressent aucun sponsor et le public ne l'apprécient pas"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "DEGAT",
+                    "number": 10
+                },
+                "win": {
+                    "carac": "DEGAT",
+                    "number": 4
+                },
+                "lose": {
+                    "carac": "",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "CHARME",
+                    "number": -2
+                },
+                "death": ""
+            }
+        },
+        {
+            "on": "FIGHT",
+            "diff": 17,
+            "text": {
+                "crit_win": "arrive à tuer un des loups d'une meute et fait fuir les autres. Il lui sert de nourriture",
+                "win": "tombe sur une meute de loup et les prends un par un",
+                "lose": "devient la proie d'une meute de loups affamés. La meute arrive à mettre quelques coups de crocs avant d'être semés",
+                "crit_lose": "est dévoré par une meute de loups"
+            },
+            "text_gr": {
+                "crit_win": "arrivent à tuer un des loups d'une meute et font fuir les autres. Il lui sert de nourriture",
+                "win": "tombent sur une meute de loup et les prennent un par un",
+                "lose": "deviennent la proie d'une meute de loups affamés. La meute arrive à mettre quelques coups de crocs avant d'être semés",
+                "crit_lose": "sont dévorés par une meute de loups"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -20
+                },
+                "death": "a été dévoré par une meute de loup",
+                "death_gr": "ont été dévorés par une meute de loup"
+            }
+        },
+        {
+            "on": "FIGHT",
+            "diff": 16,
+            "text": {
+                "crit_win": "combat à mains nues un sanglier et le tue. Il lui sert de nourriture",
+                "win": "tombe sur un sanglier mais arrive à le mettre hors d'état de nuire",
+                "lose": "tombe sur un sanglier particulièrement agressif et n'arrive pas à s'en tirer sans quelques blessures",
+                "crit_lose": "se prend une défense de sanglier en tentant d'en combattre un"
+            },
+            "text_gr": {
+                "crit_win": "combatent à mains nues un sanglier et le tuent. Il leur sert de nourriture",
+                "win": "tombent sur un sanglier mais arrivent à le mettre hors d'état de nuire",
+                "lose": "tombent sur un sanglier particulièrement agressif et n'arrivent pas à s'en tirer sans quelques blessures",
+                "crit_lose": "se prennent des coups de défenses de sanglier en tentant d'en combattre un"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -5
+                },
+                "death": "a succombé aux blessures faites par le sanglier",
+                "death_gr": "ont succombés aux blessures faites par le sanglier"
+            }
+        },
+        {
+            "on": "RAPIDITE",
+            "diff": 17,
+            "text": {
+                "crit_win": "apprivoise un singe moqueur qui lui donne un sacré coup de main",
+                "win": "se fait voler ses affaires par un singe chenapant mais réussit finalement à le rattraper et à tout récuperer",
+                "lose": "se fait voler quelques affaires par une saloperie de singe",
+                "crit_lose": "se fait entièrement racketter par un singe"
+            },
+            "text_gr": {
+                "crit_win": "apprivoisent un singe moqueur qui leur donne un sacré coup de main",
+                "win": "se font voler leurs affaires par un singe chenapant mais réussissent finalement à le rattraper et à tout récuperer",
+                "lose": "se font voler quelques affaires par une saloperie de singe",
+                "crit_lose": "se font entièrement racketter par un singe"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "SURVIE",
+                    "number": 4
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -5
+                },
+                "death": "a trépassé à cause de la faim, n'ayant plus rien pour se nourrir à cause du racket de singe"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 10,
+            "text": {
+                "crit_win": "tombe sur un serpent qui servira de nourriture",
+                "win": "rencontre un serpent dans l'après-midi mais il n'est qu'inoffensif",
+                "lose": "rencontre un serpent inoffensif qui le mort. Espérons que ce ne soit pas un venimeux...",
+                "crit_lose": "rencontre un serpent inoffensif qui le mort. Espérons que ce ne soit pas un venimeux..."
+            },
+            "text_gr": {
+                "crit_win": "tombent sur un serpent qui servira de nourriture",
+                "win": "rencontrent un serpent dans l'après-midi mais il n'est qu'inoffensif",
+                "lose": "rencontrent un serpent inoffensif qui les mort. Espérons que ce ne soit pas un venimeux...",
+                "crit_lose": "rencontrent un serpent inoffensif qui les mort. Espérons que ce ne soit pas un venimeux..."
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -10
+                },
+                "death": "n'a pas survécu à sa blessure de serpent. Il était peut-être venimeux finalement",
+                "death_gr": "n'ont pas survécu à leur blessure de serpent. Il était peut-être venimeux finalement"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 14,
+            "text": {
+                "crit_win": "tombe sur un serpent qui fera un très bon repas avec quelques pommes",
+                "win": "rencontre un serpent qui était venimeux mais arrive à l'éviter de justesse",
+                "lose": "se fait mordre par un serpent venimeux mais essaie de se soigner le plus vite possible",
+                "crit_lose": "est attaqué par un serpent. Espérons que ce ne soit pas un venimeux..."
+            },
+            "text_gr": {
+                "crit_win": "tombent sur des serpent qui feront un très bon repas avec quelques pommes",
+                "win": "rencontrent des serpent qui étaient venimeux mais arrivent à les éviter de justesse",
+                "lose": "se font mordre par des serpent venimeux mais essaient de se soigner le plus vite possible",
+                "crit_lose": "sont attaqués par un serpent. Espérons que ce ne soit pas un venimeux..."
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -10
+                },
+                "death": "n'a pas survécu à sa blessure de serpent. Il était peut-être venimeux finalement",
+                "death_gr": "n'ont pas survécu à leur blessure de serpent. Il était peut-être venimeux finalement"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 13,
+            "text": {
+                "crit_win": "pille un cadavre et trouve quelques armes",
+                "win": "trouve un cadavre dans les bois et trouve une arme",
+                "lose": "trébuche sur un cadavre dans les bois mais il n'y a plus rien à piller dessus",
+                "crit_lose": "trébuche sur un cadavre et s'enfuit de peur en perdant quelques affaires au passage"
+            },
+            "text_gr": {
+                "crit_win": "pillent un cadavre et trouvent quelques armes",
+                "win": "trouvent un cadavre dans les bois et trouvent une arme",
+                "lose": "trébuchent sur un cadavre dans les bois mais il n'y a plus rien à piller dessus",
+                "crit_lose": "trébuchent sur un cadavre et s'enfuient de peur en perdant quelques affaires au passage"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "DEGAT",
+                    "number": 5
+                },
+                "win": {
+                    "carac": "DEGAT",
+                    "number": 3
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "DEGAT",
+                    "number": -2
+                },
+                "death": ""
+            }
+        },
+        {
+            "on": "CHANCE",
+            "diff": 15,
+            "text": {
+                "crit_win": "tombe sur un zombie mais le comprend très vite et s'en débarasse",
+                "win": "trouve un cadavre qui bouge. UN ZOMBIE ! La fuite est la seule solution",
+                "lose": "trouve un cadavre mais ce dernier n'est pas si mort et essaie de mettre un coup de croc bien placé",
+                "crit_lose": "essaie de piller un cadavre dans les bois mais ce dernier est mort-vivant. C'est la morsure assurée !"
+            },
+            "text_gr": {
+                "crit_win": "tombent sur un zombie mais le comprennent très vite et s'en débarassent",
+                "win": "trouvent un cadavre qui bouge. UN ZOMBIE ! La fuite est la seule solution",
+                "lose": "trouvent un cadavre mais ce dernier n'est pas si mort et essaient de les croquer",
+                "crit_lose": "essaient de piller un cadavre dans les bois mais ce dernier est mort-vivant. C'est la morsure assurée !"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "ZOMBIE",
+                    "number": true
+                },
+                "crit_lose": {
+                    "carac": "ZOMBIE",
+                    "number": true
+                },
+                "death": "a trépassé suite à la morsure de zombie",
+                "death_gr": "ont trépassé de leur morsure de zombie"
+            }
+        },
+        {
+            "on": "SURVIE",
+            "diff": 10,
+            "text": {
+                "crit_win": "évite un gros orage en trouvant une grotte",
+                "win": "évite un gros orage",
+                "lose": "se retrouve pris sous une grosse pluie",
+                "crit_lose": "ne peut éviter une grosse tempête"
+            },
+            "text_gr": {
+                "crit_win": "évitent un gros orage en trouvant une grotte",
+                "win": "évitent un gros orage",
+                "lose": "se retrouvent pris sous une grosse pluie",
+                "crit_lose": "ne peuvent éviter une grosse tempête"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "SURVIE",
+                    "number": -1
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "death": "s'est prit un éclair sur le coin du visage",
+                "death_gr": "se sont prit un éclair sur le coin du visage"
+            }
+        },
+        {
+            "on": "FORCE",
+            "diff": 13,
+            "text": {
+                "crit_win": "escalade une falaise avec facilité et se retrouve en sécurité",
+                "win": "escalade une falaise avec difficulté mais s'en sort",
+                "lose": "tente d'escalader une falaise mais c'est hors de ses forces",
+                "crit_lose": " en essayant d'escalader une falaise, tombe et se fait mal"
+            },
+            "text_gr": {
+                "crit_win": "escaladent une falaise avec facilité et se retrouvent en sécurité",
+                "win": "escaladent une falaise avec difficulté mais s'en sortent tant bien que mal",
+                "lose": "tentent d'escalader une falaise mais c'est hors de leurs forces",
+                "crit_lose": " en essayant d'escalader une falaise, tombent et se font mal"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "SURVIE",
+                    "number": 2
+                },
+                "win": {
+                    "carac": "SURVIE",
+                    "number": 1
+                },
+                "lose": {
+                    "carac": "",
+                    "number": 0
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -3
+                },
+                "death": "a chuté de la falaise",
+                "death_gr": "ont chuté de la falaise"
+            }
+        },
+        {
+            "on": "FORCE",
+            "diff": 15,
+            "text": {
+                "crit_win": "a failli bloquer son pied dans une crevasse, mais non finalement",
+                "win": "se fait bloquer le pied dans une crevasse mais arrive à le retirer par la force",
+                "lose": "tord son pied pris dans une crevasse",
+                "crit_lose": "coince son pied dans une crevasse mais n'arrive pas à le retirer pour l'instant"
+            },
+            "text_gr": {
+                "crit_win": "ont failli bloquer leur pied dans une crevasse, mais non finalement",
+                "win": "se font bloquer le pied dans une crevasse mais arrivent à le retirer par la force",
+                "lose": "tordent leurs pieds dans un sol très accidenté",
+                "crit_lose": "se coincent les pied dans une crevasse mais n'arrive pas à les retirer pour l'instant"
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -4
+                },
+                "death": "s'est laissé mourir, le pied bloqué dans une crevasse"
+            }
+        }
+    ],
+    "starter": [
+        {
+            "on": "FIGHT",
+            "diff": 15,
+            "text": {
+                "crit_win": [
+                    "récupère des armes dans la mêlée générale",
+                    "domine la mêlée"
+                ],
+                "win": [
+                    "recupère un couteau dans la mêlée",
+                    "s'engage dans la mêlée générale sans aucune peur",
+                    "se débrouille très bien dans la mêlée"
+                ],
+                "lose": [
+                    "essaie d'éviter tant bien que mal les coups",
+                    "n'était pas fait pour la mêlée générale",
+                    "se rend compte que son entraînement n'était pas suffisant pour ce combat"
+                ],
+                "crit_lose": [
+                    "essaie de se mesurer aux autres sans réussite",
+                    "constate que la baston, c'est pas son truc",
+                    "aurait du éviter la mêlée à tout prix"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "DEGAT",
+                    "number": 4
+                },
+                "win": {
+                    "carac": "DEGAT",
+                    "number": 2
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -3
+                },
+                "death": "est assassiné au milieu des combats"
+            }
+        },
+        {
+            "on": "RAPIDITE",
+            "diff": 10,
+            "text": {
+                "crit_win": [
+                    "fuit dès le top départ à toute vitesse",
+                    "sautille comme un cambris vers des lieux bien plus sûrs"
+                ],
+                "win": [
+                    "a un temps de retard mais décide de fuir",
+                    "prend de rapidité les autres joueurs et s'échappe"
+                ],
+                "lose": [
+                    "s'enfuit dans la forêt mais trébuche",
+                    "court à l'inverse de tout le monde",
+                    "saute dans des fourrés pour se dissimuler"
+                ],
+                "crit_lose": [
+                    "fuit vers la forêt mais trébuche lamentablement en s'écorchant",
+                    "se fait attraper par un autre joueur et prend quelques coups avant de s'enfuir"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "PV",
+                    "number": 1
+                },
+                "win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -3
+                },
+                "death": "est mort en tombant bêtement dès le coup de départ"
+            }
+        },
+        {
+            "on": "FORCE",
+            "diff": 10,
+            "text": {
+                "crit_win": [
+                    "prend sous ses bras un gros sac de matériel avant de fuir",
+                    "s'empare d'une grosse batte de baseball avant de partir",
+                    "récupère une épée dans la zone de départ"
+                ],
+                "win": [
+                    "soulève un sac assez gros avant de partir du top départ",
+                    "réussit à s'emparer d'une petite arme malgré la mélée générale"
+                ],
+                "lose": [
+                    "s'attarde sur un sac trop lourd et ne prend finalement qu'un couteau",
+                    "essaie de récupérer quelque chose mais ne trouve que du verre brisé",
+                    "ne trouve pas grand chose au milieu de la cohue générale"
+                ],
+                "crit_lose": [
+                    "est attaqué dans la mêlé en essayant de prendre un sac bien trop lourd",
+                    "se fait tabasser par quelqu'un",
+                    "trébuche, tombe et se fait piétiner"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "FORCE",
+                    "number": 3
+                },
+                "win": {
+                    "carac": "DEGAT",
+                    "number": 2
+                },
+                "lose": {
+                    "carac": "DEGAT",
+                    "number": 1
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -4
+                },
+                "death": "est mort dans la cohue du départ"
+            }
+        }
+    ],
+    "cold": [
+        {
+            "on": "FORCE",
+            "diff": 15,
+            "name": "L'Hiver vient !",
+            "desc": "Une vague de froid et de neige s'abat sur le terrain. J'espère que les participants ont pensé à prendre leurs manteaux !",
+            "text": {
+                "crit_win": [
+                    "trouve une grotte et se protège plutôt bien du froid",
+                    "résiste au froid par sa seule force de volonté",
+                    "découvre une cabane pour se protéger de la neige",
+                    "réussit à allumer un grand feu de joie pour éviter d'être frigorifier"
+                ],
+                "win": [
+                    "s'entoure bien dans ses vêtements et réussit à résister aux gelures",
+                    "trouve un abri entre des rochers pour éviter le vent",
+                    "souffre mais résiste bien au froid",
+                    "ne paraît pas aussi touché que ça par la neige"
+                ],
+                "lose": [
+                    "subit le froid de pleins fouet",
+                    "pense à une île bien tropicale mais cela n'aide pas",
+                    "tremble de froid",
+                    "perd un doigt à cause des gelures"
+                ],
+                "crit_lose": [
+                    "se laisse aller dans la neige et le froid",
+                    "ne peut plus faire un seul pas sous la morsure du vent",
+                    "ne pense pas pouvoir s'en tirer",
+                    "a perdu deux membres, brisés par le froid"
+                ]
+            },
+            "text_gr": {
+                "crit_win": [
+                    "trouvent une grotte et se protègent plutôt bien du froid",
+                    "résistent au froid par leur seule force de volonté",
+                    "découvrent une cabane pour se protéger de la neige",
+                    "réussissent à allumer un grand feu de joie pour éviter d'être frigorifier"
+                ],
+                "win": [
+                    "s'entourent bien dans leurs vêtements et réussissent à résister aux gelures",
+                    "trouvent un abri entre des rochers pour éviter le vent",
+                    "souffrent mais résistent bien au froid",
+                    "ne paraîssent pas aussi touché que ça par la neige"
+                ],
+                "lose": [
+                    "subissent le froid de pleins fouet",
+                    "pensent à une île bien tropicale mais cela n'aide pas",
+                    "tremblent de froid",
+                    "perden des doigts à cause des gelures"
+                ],
+                "crit_lose": [
+                    "se laissent aller dans la neige et le froid",
+                    "ne peuvent plus faire un seul pas sous la morsure du vent",
+                    "ne pensent pas pouvoir s'en tirer",
+                    "ont perdu des membres, brisés par le froid"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -5
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -15
+                },
+                "death": [
+                    "a été emporté par le terrible froid",
+                    "s'est assoupi dans la neige et ne s'est plus jamais réveillé",
+                    "n'aura su résister à la morsure terrible du vent"
+                ],
+                "death_gr": [
+                    "ont été emporté par le terrible froid",
+                    "se sont assoupis dans la neige et ne se sont plus jamais réveillés",
+                    "n'auront pas su résister à la morsure terrible du vent"
+                ]
+            }
+        }
+    ],
+    "sun": [
+        {
+            "on": "FORCE",
+            "diff": 15,
+            "name": "Réchauffement climatique !",
+            "desc": "Un temps pour aller à la mer ! Mais nos participants ont sans doute d'autres idées en tête aujourd'hui. Voyons comment ils vont se débrouiller face à cette canicule !",
+            "text": {
+                "crit_win": [
+                    "découvre un lac au milieu des bois et s'y plonge",
+                    "trouve une super cascade pour passer cette difficile journée de chaleur",
+                    "utilise une tactique de guerillas consistant à s'enterrer à moitié sous la terre"
+                ],
+                "win": [
+                    "rationne tant bien que mal le peu d'eau dans ses affaires",
+                    "trouve une plante particulièrement hydratante",
+                    "reçoit de la crème solaire d'un sponsor",
+                    "se cache dans une grotte fraîche"
+                ],
+                "lose": [
+                    "souffre du soleil",
+                    "a la peau qui prend un méchant coup de soleil",
+                    "essaie de ne pas penser à la chaleur en se concentrant sur le Père Noël",
+                    "doit se débarasser d'une bonne partie de ses vêtements",
+                    "préferait être dans le désert qu'ici"
+                ],
+                "crit_lose": [
+                    "attrape une insolation",
+                    "se laisse tomber sous un arbre en espérant ne pas mourir sous la chaleur",
+                    "manque cruellement d'eau",
+                    "a le corps complètement asséché"
+                ]
+            },
+            "text_gr": {
+                "crit_win": [
+                    "découvrent un lac au milieu des bois et y plongent",
+                    "trouvent une super cascade pour passer cette difficile journée de chaleur"
+                ],
+                "win": [
+                    "rationnent tant bien que mal le peu d'eau dans leurs affaires",
+                    "trouvent une plante particulièrement hydratante",
+                    "reçoivent de la crème solaire d'un sponsor"
+                ],
+                "lose": [
+                    "souffrent du soleil",
+                    "ont la peau qui prend un méchant coup de soleil",
+                    "tentent de s'évader dans leur tête en pensant au Père Noel"
+                ],
+                "crit_lose": [
+                    "attrapent une insolation",
+                    "se laissent tomber sous un arbre en espérant ne pas mourir sous la chaleur",
+                    "manquent cruellement d'eau",
+                    "ont le corps complètement asséché"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -4
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -8
+                },
+                "death": [
+                    "a été pris par la chaleur extrème de la journée",
+                    "n'a pu résister à la sécheresse",
+                    "a littéralement brulé sous le soleil"
+                ],
+                "death_gr": [
+                    "ont été pris par la chaleur extrème de la journée",
+                    "n'ont pu résister à la sécheresse",
+                    "ont littéralement brulé sous le soleil"
+                ]
+            }
+        }
+    ],
+    "troupeau": [
+        {
+            "on": "SURVIE",
+            "diff": 15,
+            "name" : "J'ai tué Mufasa",
+            "desc" : "On dirait bien qu'un immense troupeau de boeuf a été laché sur le terrain. Ils ravagent tout sur leur passage ! Je n'aimerais pas être à la place de nos participants",
+            "text": {
+                "crit_win": [
+                    "grimpe dans un arbre et regarde passer le troupeau tranquillement"
+                ],
+                "win": [
+                    "trouve de justesse, un rocher derrière lequel se cacher"
+                ],
+                "lose": [
+                    "prend quelques coups de cornes avant de réussir à se planquer"
+                ],
+                "crit_lose": [
+                    "se fait balader de droite à gauche entre les cornes des animaux"
+                ]
+            },
+            "text_gr": {
+                "crit_win": [
+                    "grimpent dans un arbre et regardent passer le troupeau tranquillement"
+                ],
+                "win": [
+                    "trouvent de justesse, un rocher derrière lequel se cacher"
+                ],
+                "lose": [
+                    "prennent quelques coups de cornes avant de réussir à se planquer"
+                ],
+                "crit_lose": [
+                    "se font balader de droite à gauche entre les cornes des animaux"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "",
+                    "number": 0
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": -1
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -4
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -8
+                },
+                "death": [
+                    "a été piétiné par le troupeau"
+                ],
+                "death_gr": [
+                    "ont été piétinné par le troupeau"
+                ]
+            }
+        }
+    ],
+    "tempete" : [
+        {
+            "on": "SURVIE",
+            "diff": 15,
+            "name" : "I wanna go home !",
+            "desc" : "Que vois-je là-bas ? Ne serait-ce pas une tornade qui se forme et qui compte ravager le terrain ? Ah si.",
+            "text": {
+                "crit_win": [
+                    "arrive à rester dans l'oeil du cyclone avec grand talent",
+                    "s'attache avec une corde contre un vieil et solide arbre",
+                    "ne croise même pas la tornade. Quelle chance !"
+                ],
+                "win": [
+                    "trouve une grotte dans laquelle se cacher du vent",
+                    "esquive la plupart des objets volants"
+                ],
+                "lose": [
+                    "reçoit des éclats d'arbres jetés par la tornade",
+                    "reçoit des éclats des roches jetées par la tornade",
+                    "se fait fouetter par le vent",
+                    "se souille à cause de la peur de mourir sous la puissance des éléments"
+                ],
+                "crit_lose": [
+                    "se prend une vache sur le coin du visage",
+                    "ne peut éviter une baleine transportée par la tornade",
+                    "s'envole par la force de la météo"
+                ]
+            },
+            "text_gr": {
+                "crit_win": [
+                    "arrivent à rester dans l'oeil du cyclone avec grand talent",
+                    "s'attachent avec des corde contre un vieil et solide arbre",
+                    "ne croisent même pas la tornade. Quelle chance !"
+                ],
+                "win": [
+                    "trouvent une grotte dans laquelle se cacher du vent",
+                    "esquivent la plupart des objets volants"
+                ],
+                "lose": [
+                    "reçoivent des éclats d'arbres jetés par la tornade",
+                    "reçoivent des éclats des roches jetéss par la tornade",
+                    "se font fouetter par le vent",
+                    "se souillent à cause de la peur de mourir sous la puissance des éléments"
+                ],
+                "crit_lose": [
+                    "se prennent une vache sur le coin du visage",
+                    "s'envolent par la force de la météo"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "CHARME",
+                    "number": 10
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": -2
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -7
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -10
+                },
+                "death": [
+                    "Mort dans la tempête"
+                ],
+                "death_gr": [
+                    "Morts dans la tempête"
+                ]
+            }
+        }
+    ],
+    "volcan" : [
+        {
+            "on": "RAPIDITE",
+            "diff": 11,
+            "name" : "Cendre, terre et lave",
+            "desc" : "Des tremblements de terre ? Un bruit sourd ? On dirait bien que le volcan sous les pieds des participants est en train de se réveiller !",
+            "text": {
+                "crit_win": [
+                    "regarde l'éruption de loin, en souriant",
+                    "a suffisament de tissu pour se protéger de la cendre"
+                ],
+                "win": [
+                    "trouve une grotte dans laquelle se cacher de l'explosion",
+                    "court assez vite pour esquiver les dégâts",
+                    "se cache des éléments sur une élevation rocheuse",
+                    "prend un coup de chaud mais réussit à courir plus vite que la lave"
+                ],
+                "lose": [
+                    "s'étouffe en partie avec la cendre",
+                    "évite la lave mais prend un coup de chaud terrible",
+                    "ne peut éviter tous les morceaux de roches qui tombent du ciel"
+                ],
+                "crit_lose": [
+                    "n'arrive pas à fuir la lave",
+                    "se prend un rocher sur la tronche",
+                    "n'échappe pas à la cendre qui l'étouffe"
+                ]
+            },
+            "text_gr": {
+                "crit_win": [
+                    "regardent l'éruption de loin, en souriant",
+                    "ont suffisament de tissu pour se protéger de la cendre"
+                ],
+                "win": [
+                    "trouvent une grotte dans laquelle se cacher de l'explosion",
+                    "courent assez vite pour esquiver les dégâts",
+                    "se cachent des éléments sur une élevation rocheuse",
+                    "prennent un coup de chaud mais réussissent à courir plus vite que la lave"
+                ],
+                "lose": [
+                    "s'étouffnte en partie avec la cendre",
+                    "évitent la lave mais prend un coup de chaud terrible",
+                    "ne peuvent éviter tous les morceaux de roches qui tombent du ciel"
+                ],
+                "crit_lose": [
+                    "n'arrivent pas à fuir la lave",
+                    "se prennent un rocher sur la tronche",
+                    "n'échappent pas à la cendre qui les étouffe"
+                ]
+            },
+            "result": {
+                "crit_win": {
+                    "carac": "CHARME",
+                    "number": 10
+                },
+                "win": {
+                    "carac": "PV",
+                    "number": 0
+                },
+                "lose": {
+                    "carac": "PV",
+                    "number": -5
+                },
+                "crit_lose": {
+                    "carac": "PV",
+                    "number": -10
+                },
+                "death": [
+                    "Mort par le volcan"
+                ],
+                "death_gr": [
+                    "Morts par le volcan"
+                ]
+            }
+        }
+    ]
+}

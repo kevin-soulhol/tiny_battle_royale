@@ -68,6 +68,7 @@
         right: -5px;
         transition: all 0.2s ease-in-out;
         cursor: pointer;
+        max-width: 50px;
 
         &:hover{
             transform: scale(1.1);

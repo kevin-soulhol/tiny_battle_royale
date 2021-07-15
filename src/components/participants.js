@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useEffect, useState } from 'react';
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Players from "../components/Imgplayer"
 import DisplayAllImagePlayers from "../components/displayAllImagePlayers"
 
 const Participants = () => {
     const MaxPlayers = 5
-    const [Participants, setParticipants] = useState([])
+    const autoPlayerStarter = 2
     const [Indexer, setIndexer] = useState(0)
+    const [Participants, setParticipants] = useState([])
+    const [imagesPrises, setImagesPrises] = useState([])
 
     const [openedImages, setOpenedImages] = useState(false)
     const [selectPlayer, setSelectPlayer] = useState()
+
 
     //récupération de toutes les images
     const data = useStaticQuery(
@@ -52,24 +55,31 @@ const Participants = () => {
     )
 
 
+    useEffect(() => {
+        //Création d'un premier joueur au démarrage de la page
+        add_players()
+    }, [])
+
+    useEffect(() => {
+        if(Participants.length < autoPlayerStarter){
+            add_players()
+        }
+    }, [Participants])
 
     const add_players = () => {
         if (Participants.length < MaxPlayers) {
-
             let participant = createPlayer()
-            
+
             let newArr = [...Participants]
             newArr.push(participant)
             setParticipants(newArr)
             setIndexer(Indexer + 1)
-
         }
-
     }
 
 
     const delete_players = (index) => {
-        if (Participants.length > 0) {
+        if (Participants.length > 2) {
             let newArr = [...Participants]
             newArr.splice(newArr.findIndex(item => item.index === index), 1)
             setParticipants(newArr)
@@ -83,7 +93,6 @@ const Participants = () => {
     }
 
     const openImages = (indexPlayer) => {
-        console.log(indexPlayer);
         setSelectPlayer(indexPlayer)
         setOpenedImages(true)
     }
@@ -96,11 +105,20 @@ const Participants = () => {
     /** *************** CHANGEMENT SUR PLAYER */
 
     const createPlayer = () => {
+        let random_number_img = 0
+        let new_array = imagesPrises
+
+        do {
+            random_number_img = Math.floor(Math.random() * data.allFile.edges.length)
+        } while (imagesPrises.indexOf(random_number_img) !== -1)
+
+        new_array.push(random_number_img)
+        setImagesPrises(new_array)
+
         let participant = {
             index: Indexer,
             nom: "",
-            img: "caca",
-            fluid: data.allFile.edges[Math.floor(Math.random() * data.allFile.edges.length)].node.childrenImageSharp[0].fluid
+            fluid: data.allFile.edges[random_number_img].node.childrenImageSharp[0].fluid
         }
 
         return participant
@@ -117,7 +135,7 @@ const Participants = () => {
 
     return (
         <div id="section_participants">
-            <h4>Participants</h4>
+            <h4>Choisissez vos participants</h4>
             <div className="contain_players">
                 {Participants.map((participant) => (
                     <Players
@@ -135,14 +153,19 @@ const Participants = () => {
                     <Players add="true" adder={add_players}></Players>
                 }
             </div>
-            <button>Lancer la partie {Participants.length}</button>
-            <span>Et puisse le sort vous être … bien sympa</span>
+            <Link
+                to="/game/"
+                state={{ joueurs: Participants }}
+            >
+                <button>Lancer la partie</button>
+            </Link>
+            <span className="soustitre_btn">(Et puisse le sort vous être … bien <em>sympa</em>)</span>
             {openedImages &&
-                <DisplayAllImagePlayers 
-                data={data.allFile.edges}
-                indexPlayer = {selectPlayer}
-                closer = {closeImages}
-                changerImage = {setImagePlayer}
+                <DisplayAllImagePlayers
+                    data={data.allFile.edges}
+                    indexPlayer={selectPlayer}
+                    closer={closeImages}
+                    changerImage={setImagePlayer}
                 />
             }
 

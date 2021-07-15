@@ -1,0 +1,305 @@
+.displayEvent{
+    margin: auto;
+    margin-top: 5em;
+    max-width: max-content;
+
+    .containTextEvent{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        @media (max-width:800px){
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+
+    .img_player{
+
+        position: relative;
+        cursor: inherit;
+        width: min-content;
+        margin: auto;
+
+        .containImg{
+            height: 270px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            @media (max-width:800px){
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            &:hover{
+                opacity: 0.8;
+            }
+
+            .gatsby-image-wrapper{
+                width: 170px;
+                height: 270px;
+            }
+
+            .zomby{
+            
+                filter : hue-rotate(106deg);
+     
+             }
+
+             .dead{
+                 filter : grayscale(1);
+             }
+        }
+    }
+
+    .name{
+        font-size: 1.2em;
+    }
+
+    .text{
+        max-width: 600px;
+    }
+
+
+
+    .triangle{
+        display: block;
+        width: 50px; 
+        height: 50px; 
+        background-image: url("../images/blue_triangle.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        z-index: 2;
+        bottom: 0px;
+        left: -5px;
+    }
+
+    .top_triangle{
+        top: -9px;
+        right: -5px;
+        left: unset;
+        transform: rotate(180deg);
+
+    }
+
+
+    .explose{
+        display: block;
+        width: 80px; 
+        height: 80px; 
+        background-image: url("../images/explose_orange.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        z-index: 2;
+        bottom: -6px;
+        right: -35px;
+        transform: rotate(180deg);
+        animation : AppearExplose2 0.3s ease-in;
+    }
+
+    .top_explose{
+        top: -29px;
+        right: unset;
+        left: -41px;
+        transform: rotate(0deg);
+        animation : AppearExplose1 0.3s ease-in;
+
+    }
+
+    .fight{
+        display: block;
+        width: 156%; 
+        height: 120%; 
+        background-image: url("../images/bg_fight.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        position: absolute;
+        z-index: -1;
+        left:-29%;
+        bottom:15px;
+        animation : AppearExplose2 0.3s ease-in;
+
+    }
+
+    .group{
+        display: block;
+        width: 50%; 
+        height: 80px; 
+        background-image: url("../images/bg_group.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        position: absolute;
+        z-index: 2;
+        bottom: 5%;
+        opacity: 0.7;
+        animation : AppearExplose2 0.3s ease-in;
+        
+    }
+
+
+}
+
+
+
+.displayEvent.default{
+
+
+    .name{
+        color:$blue;
+    }
+
+}
+
+
+.displayEvent.damage{
+
+
+    .containImg{
+        filter: grayscale(0.5);
+    }
+
+    .name{
+        color:$orange;
+    }
+
+}
+
+
+.displayEvent.dead{
+
+    .containImg{
+        filter: grayscale(1);
+        width: 140px;
+        height: 190px;
+    }
+
+    
+    .closeCross{
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        svg{
+            width: 130%;
+            max-width: 300px;
+            margin: auto;
+            position: relative;
+            left: -13%;
+            opacity: 0.8;
+        }
+    }
+}
+
+
+.displayEvent.winner{
+
+    .img_player{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .back{
+        display: block;
+        width: 300%;
+        height: 110%;
+        background-image: url("../images/winner_back.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        z-index: 0;
+    }
+
+    .containImg{
+        opacity: 1;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    .containTextEvent{
+        color: $blue;
+    }
+
+    .day_past{
+        color:$black;
+        font-size: 0.9em;
+    }
+}
+
+.displayEvent.zombie{
+    .containImg{
+        width: 150px;
+        height: 250px;
+
+    }
+
+    .deadhead{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url("../images/deathhead.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        transform: rotate(-10deg);
+    }
+
+    .containTextEvent{
+        color:$green;
+    }
+}
+
+.displayEvent.group{
+    .containImg{
+        width: auto !important;
+        opacity:1;
+    }
+
+    .img_player{
+        width: auto !important;
+        align-items: center;
+    }
+    
+}
+
+
+
+@keyframes AppearExplose1{
+    0%{
+        top:50%;
+        left: 50%;
+    }
+    100%{
+        top:-29px;
+        left:-41px;
+    }
+}
+
+@keyframes AppearExplose2{
+    0%{
+        bottom: 50%;
+        right: 50%;
+    }
+    100%{
+        bottom: -6px;
+        right: -35px;
+    }
+}

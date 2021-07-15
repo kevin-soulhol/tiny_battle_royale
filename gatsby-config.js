@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Agence PLOP!`,
-    description: `L'agence web qu'il vous faut ! Celle qui a du POP et qui saura répondre à toutes vos questions concernant votre site internet.`,
+    title: `Tiny Battle Royale`,
+    description: `Amusez-vous avec ce simulateur de Battle Royale, type Jeux de la Faim (Hunger Game). Seul ou à plusieurs, choisissez vos participants et laissez-les se battre dans l'arène et subir des évènements aléatoires. Qui sera le vainqueur ? A vous de le découvrir en jeu.`,
     author: `Kévin Soulhol`,
   },
   plugins: [
@@ -32,10 +32,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#F27D16`,
+        theme_color: `#D92949`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
