@@ -52,8 +52,7 @@ export default class Player {
 
     zombify() {
         this.is_zombie = true;
-        let text = this.all_phrases_array("zombify")
-        this.text_death = text.textsolo[0]
+        this.text_death = this.get_phrase("dead_by_zomby")
         this.CARAC.PV = 5
         this.CARAC.FIGHTER = 3
         this.CARAC.DEGAT = 10
@@ -136,6 +135,7 @@ export default class Player {
             for (let i in this.membres) {
                 this.membres[i].in_group = false
                 players.push(this.membres[i])
+
             }
 
             this.ALIVE = false
@@ -406,6 +406,21 @@ export default class Player {
                     ]
                 }
                 break;
+
+
+            case "zombify":
+                phrases = {
+                    singulier: [
+                        "se fait mordre par un cadavre",
+                        "se fait mordre par un fou qui semble particulièrement fatigué... ou mort"
+                    ],
+                    pluriel: [
+                        "se font mordre par un cadavre",
+                        "se font mordre par un fou qui semble particulièrement fatigué... ou mort"
+                    ]
+                }
+                break;
+
 
 
             case "zomby":

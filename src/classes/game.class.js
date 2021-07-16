@@ -29,7 +29,7 @@ export default class Game {
 
 
             this.difficulte_rencontre = 14 // 14
-            this.difficulte_charmer = 10 // 10
+            this.difficulte_charmer = 0 // 10
             this.difficulte_cacher = 18 // 18
             this.difficulte_keep_love = 3 //3
             this.difficulte_win_love = 24 // 24
@@ -67,7 +67,7 @@ export default class Game {
         await this.mise_a_jour_players()
 
         //Il n'y a plus de joueurs. Fin du jeu
-        let is_end = this.is_end()
+        let is_end = await this.is_end()
         if (is_end.endgame) {
             return false
         }
@@ -76,9 +76,9 @@ export default class Game {
         //préparation de la journée
         this.set_day(1)
         let event_type = "main"
-        if(!is_end.no_events){
+        if (!is_end.no_events) {
             event_type = await this.choose_special_day() ?? "main"
-        } else if(is_end.couple){
+        } else if (is_end.couple) {
             event_type = "end_lovers"
         }
 
@@ -134,7 +134,7 @@ export default class Game {
             //que fait-il ?
             if (!player.action) {
 
-                if(player.next_move == "degroup"){
+                if (player.next_move == "degroup") {
                     //couple se sépare
                     player.get_phrase("lovers_end")
                     r(player)
@@ -156,7 +156,7 @@ export default class Game {
 
                 // RENCONTRES : peuvent s'éviter, se regrouper ou se battre
                 if (!player.action && player.roll_dice("CHANCE", this.difficulte_rencontre) && (!this.SPECIALEVENT.index || this.SPECIALEVENT.index == "starter")) {
-             
+
                     //selection de la personne rencontrée
                     let try_meet = false
                     let meet = false
@@ -174,6 +174,8 @@ export default class Game {
                         meet = try_meet
                     }
 
+                
+
                     if (meet) {
                         player.action = "meet"
                         //si meet est plus fort en combat, alors tentative de fuite
@@ -187,6 +189,7 @@ export default class Game {
                                 meet
                                 && this.CACHE_PARTICIPANTS_DAY.length > 2
                                 && !meet.is_zombie
+                                && !player.is_zombie
                                 && player.roll_dice("CHARME", this.difficulte_charmer)
                                 && !player.is_love
                                 && !meet.is_love
@@ -197,16 +200,20 @@ export default class Game {
                                 new_group = this.group(player, meet)
 
                             } else {
+                                if(player.is_zombie && meet.is_zombie){ return ; }
+
                                 player.action = "fight"
                                 meet.action = "fight"
                                 let result = this.figth(player, meet)
 
 
                                 if (result && result.death) {
-                                    this.kill_player(result.death, "Mort sous les coups de " + result.winner.name)
+                                   
 
                                     if (result.winner.is_zombie) {
                                         this.prepare_zombifying(result.death)
+                                    } else {
+                                        this.kill_player(result.death, "Mort sous les coups de " + result.winner.name)
                                     }
 
                                 }
@@ -300,7 +307,7 @@ export default class Game {
                     this.DEADS.push(player)
                 }
 
-                if(player.CARAC.PV <= 0 && (!player.is_zombie || player.is_really_dead)){
+                if (player.CARAC.PV <= 0 && (!player.is_zombie || player.is_really_dead)) {
                     player.ALIVE = false
                 }
 
@@ -310,7 +317,7 @@ export default class Game {
             for (let i in this.GROUPS) {
                 this.GROUPS[i].action = false
 
-                if(this.GROUPS[i].CARAC.PV <= 0){
+                if (this.GROUPS[i].CARAC.PV <= 0) {
                     this.GROUPS[i].ALIVE = false
                 }
 
@@ -363,7 +370,7 @@ export default class Game {
                         "volcan"
                     ]
                     result = events[Math.floor(Math.random() * events.length)]
-                    result = "volcan";
+                    //result = "volcan";
                     break;
 
                 default:
@@ -446,7 +453,7 @@ export default class Game {
         this.GROUPS = copy
     }
 
-    is_end() {
+    async is_end() {
         //fin d'une personne
         //fin d'un groupe
         //fin lover
@@ -457,61 +464,71 @@ export default class Game {
             winner: false
         }
 
-        //si il reste un groupe
+
+        let players_in_game = await this.recup_participants_day()
+        console.log(players_in_game);
+
         let group_alive = 0
+        let zombies_alive = 0
+        let player_alive = 0
+        let lovers_alive = 0
+
         let last_group = false
-        for (let i in this.GROUPS) {
-            if (this.GROUPS[i].ALIVE && !this.GROUPS[i].hidden) {
-                group_alive++
-                last_group = this.GROUPS[i]
-            }
-        }
-
-        //si tout le monde est mort sauf 1
-        let players_alive = 0
-        let zomby_alive = 0
         let last_player = false
-        for (let i in this.PLAYERS) {
-            if (this.PLAYERS[i].ALIVE == true) {
-                players_alive++
-                last_player = this.PLAYERS[i]
+
+        for (let i in players_in_game) {
+            let player = players_in_game[i]
+
+            player_alive++
+
+            if (player.is_group) {
+                group_alive++
+                last_group = player
             }
-            if (this.PLAYERS[i].is_zombie) {
-                zomby_alive++
+            if (player.is_love) {
+                lovers_alive++
             }
+            if (player.is_zombie) {
+                zombies_alive++
+            }
+
+            if(!player.is_zombie && !player.is_group && !player.is_love){
+                last_player = player
+            }
+
         }
 
-
-
-
-
-        //Analyse des résultats
-        if (players_alive == 1 && !zomby_alive) {
-            //qu'un seul survivant
-            result.endgame = true
-            result.winner = last_player
-        } else if (zomby_alive == players_alive && players_alive > 0 && zomby_alive > 0) {
-            //que des zombies restants
-            result.endgame = true
-            result.winner = { name: "Zombicalipse !", text_win: "Les zombies ont pris le contrôle du terrain ! J'espère que nos équipes arriveront à les contenir avant que tout cela ne dégènère..." }
-        } else if (last_group && players_alive <= last_group.all_photo.length && group_alive == 1 && last_group.is_love) {
-            //il ne reste qu'un couple final
-            
-            result = this.end_for_lovers(last_group)
-        } else if (last_group && players_alive <= last_group.all_photo.length && group_alive == 1) {
-            //qu'un groupe survivant = degroup
-            result.endgame = false
-            last_group.passion = -999
-            this.difficulte_charmer = 900 // empêche de se remettre ensemble
-        } else if (!players_alive && !last_group) {
+        if (player_alive == 1) {
+            if (player_alive == zombies_alive) { //il ne reste qu'un zombie
+                result.endgame = true
+                result.winner = { name: "Zombicalypse !", text_win: "Les zombies ont pris le contrôle du terrain ! J'espère que nos équipes arriveront à les contenir avant que tout cela ne dégènère..." }
+            } else if (group_alive == player_alive) { // il ne reste qu'un groupe
+                if (player_alive == lovers_alive) { // il ne reste qu'un couple
+                    result = this.end_for_lovers(last_group)
+                } else {
+                    result.endgame = false
+                    result.no_events = true
+                    last_group.passion = -999
+                    this.difficulte_charmer = 900 // empêche de se remettre ensemble
+                }
+            } else { //il ne reste qu'une personne
+                result.endgame = true
+                result.winner = last_player
+            }
+        } else if(!player_alive && !group_alive){
             result.endgame = true
             result.winner = { name: "Personne", text_win: "Incroyable ! Tout le monde est mort sur la dernière ligne droite ! Ce n'est pas arrivé depuis les années 80'" }
+        } else if (player_alive == zombies_alive) { // il ne reste que des zombies
+            result.endgame = true
+            result.winner = { name: "Zombicalypse !", text_win: "Les zombies ont pris le contrôle du terrain ! J'espère que nos équipes arriveront à les contenir avant que tout cela ne dégènère..." }
+        } else { // pas de fin de game
         }
 
 
         if (result.winner) {
             this.WINNER = result.winner
         }
+
         return result
     }
 
@@ -616,10 +633,9 @@ export default class Game {
 
     result_event(player, event, win_or_lose) {
         if (event.result[win_or_lose].carac == "ZOMBIE") {
-            this.prepare_zombifying(player)
-            this.kill_player(player, "a été mordu par un zombie.")
+            this.prepare_zombifying(player, event.result.death)
         } else {
-            if(!player.CARAC[event.result[win_or_lose].carac]){
+            if (!player.CARAC[event.result[win_or_lose].carac]) {
                 player.CARAC[event.result[win_or_lose].carac] = 0
             }
             player.CARAC[event.result[win_or_lose].carac] = player.CARAC[event.result[win_or_lose].carac] + parseInt(event.result[win_or_lose].number)
@@ -640,9 +656,14 @@ export default class Game {
             player.next_move = "dead"
             player.text_death = text ? text : "Mort de raisons inconnues"
 
-            if(player.is_zombie){
-                player.is_really_dead = true
+            if(Array.isArray(player.text_death)){
+                player.text_death = player.text_death[Math.floor(Math.random() * player.text_death.length)]
             }
+
+/*
+            if (player.is_zombie) {
+                player.is_really_dead = true
+            }*/
         }
 
     }
@@ -716,6 +737,11 @@ export default class Game {
         this.TO_ZOMBIFY.push(player)
         player.ALIVE = false
         player.zombifing = true
+        if(!player.text_death){
+            this.kill_player(player, ["Aïe aïe aïe ! Ne serait-ce pas la morsure d'un zombie qui agit ?"])
+        } else {
+            this.kill_player(player)
+        }
 
     }
 
@@ -724,10 +750,10 @@ export default class Game {
         result.no_events = true
         result.endgame = false
 
-        if(group_lovers.CARAC.WIN  && group_lovers.CARAC.WIN >= 1){
+        if (group_lovers.CARAC.WIN && group_lovers.CARAC.WIN >= 1) {
             result.endgame = true
             result.winner = group_lovers
-            group_lovers.text_win = "POPOPOPOOOOOOOOOW !!! L'amour l'emporte sur tout !!! C'est "+group_lovers.name+" qui gagne la Battle !!!"
+            group_lovers.text_win = "POPOPOPOOOOOOOOOW !!! L'amour l'emporte sur tout !!! C'est " + group_lovers.name + " qui gagne la Battle !!!"
         }
 
 
@@ -742,7 +768,7 @@ export default class Game {
             this.degroup(group_lovers, "lovers_end")
         }
 
-        
+
         return result
     }
 
@@ -770,11 +796,13 @@ export default class Game {
     }
 
     async degroup(group, type_text = false) {
-        //group.action = "degroup"
+      
         group.next_move = "degroup"
 
         if (type_text) {
             group.get_phrase(type_text)
+        } else {
+            group.action = "degroup"
         }
 
     }
@@ -796,10 +824,8 @@ export default class Game {
 
 
 
-// groupe qui meurt : apparait aussi les membres comme mort lors de la nuit
 
-//fin zombie + fin lovers
-
+//image fin zomby
 
 //zombie really_dead
 
