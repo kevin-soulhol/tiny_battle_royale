@@ -7,8 +7,16 @@
     padding-bottom: 6em;
     position: relative;
 
+
+    
+
+
     @media screen and (max-width: 1055px) {
         padding-bottom: 10em;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding-bottom: 0em;
     }
 
     .background{
@@ -25,6 +33,11 @@
             height: 100%;
         }
 
+        @media screen and (max-width: 900px) {
+            height: 95%;
+            top : -15px;
+        }
+
     }
 
 
@@ -37,6 +50,11 @@
 
         @media screen and (max-width: 600px) {
             margin-top: -5vw;
+        }
+
+        @media screen and (max-width: 700px) {
+            padding-bottom: 2em;
+            padding-top: 3em;
         }
 
         @media screen and (max-width: 1055px) {
@@ -106,6 +124,7 @@
 
         @media screen and (max-width: 943px) {
             margin-top: 2em;
+            text-align: left;
         }
 
         @media screen and (max-width: 530px) {
@@ -113,6 +132,8 @@
 
             h3{
                 text-align: center;
+                text-align: left;
+                padding: 0;
             }
 
             button{
@@ -187,5 +208,9 @@
     max-width: $containermax;
     margin: auto;
 
+    @media screen and (max-width: 700px) {
+        padding-top: 1em;
+
+}
 
 }

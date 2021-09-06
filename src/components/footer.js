@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from "gatsby"
 
 const Footer = () => {
+
+    const getCopyright = () => {
+        return (<span>
+            © {new Date().getFullYear()}, Kévin Soulhol - Atelier les Petites Choses | Illustrations par <a href="https://www.behance.net/viktormillergausa" target="_blank">Viktor Miller-Gausa</a> | version 1.0
+        </span>)
+    }
+
+
     return (
         <footer>
             <div className="background"></div>
@@ -9,18 +17,11 @@ const Footer = () => {
                 <div className="col">
                     <Link to="/about">A propos</Link>
                     <Link to="/assistance">Assistance</Link>
-                    <Link to="/">Autres jeux</Link>
-                </div>
-                <div className="col">
-                    <button>M'offrir un café</button>
-                    Réseaux
+                    <Link className="btn_paypal" to="https://www.paypal.com/donate?hosted_button_id=9JG996KBXZVE6" target="_blank" rel="noopener noreferrer">M'offrir un café ?</Link>
                 </div>
             </div>
             <div className="copyright">
-                © {new Date().getFullYear()}, Kévin Soulhol | Illustrations par
-                <a href="https://www.behance.net/viktormillergausa" target="_blank" style={{margin:"0 3px"}}>Viktor Miller-Gausa</a>
-                | version 1.0
-                
+                {getCopyright()}
             </div>
 
         </footer>

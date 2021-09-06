@@ -1,6 +1,7 @@
-#appGame{
+.appGame{
     display: flex;
     flex-direction: column;
+    overflow: visible;
 
     .message{
         text-align: center;

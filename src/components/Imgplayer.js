@@ -8,8 +8,6 @@ const Imgplayer = (props) => {
   const ADD = props.add ? true : false
   const img_fluid = props.fluid
 
-
-
   const add_players = () => {
     props.adder()
   }
@@ -35,7 +33,11 @@ const Imgplayer = (props) => {
           onClick={handleClickImage}>
           <Img fluid={img_fluid} />
         </div>
-        <div className="close" onClick={delete_players}><CloseCross /></div>
+
+        {
+          (props.currentSelectedParticipants > props.minParticipants) && <div className="close" onClick={delete_players}><CloseCross /></div>
+        }
+        
         <input
           className="name_player"
           type="text" value={props.nom}

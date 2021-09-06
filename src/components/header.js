@@ -6,6 +6,7 @@ import Logo from "../components/mini_components/Logo"
 
 const Header = () => (
   <header>
+    < link rel = " manifest " href = ""  />
     <Logo />
     <ul className="menu">
       <li><Link to="/about">A propos</Link></li>

@@ -738,7 +738,11 @@ export default class Game {
         player.ALIVE = false
         player.zombifing = true
         if(!player.text_death){
-            this.kill_player(player, ["Aïe aïe aïe ! Ne serait-ce pas la morsure d'un zombie qui agit ?"])
+            this.kill_player(player, [
+                "Aïe aïe aïe ! Ne serait-ce pas la morsure d'un zombie qui agit ?",
+                "La morsure du zombie est sacrément efficace",
+                "Walking Dead ? Vous connaissez ?"
+            ])
         } else {
             this.kill_player(player)
         }
@@ -828,5 +832,7 @@ export default class Game {
 //image fin zomby
 
 //zombie really_dead
+
+//partager sa partie
 
 

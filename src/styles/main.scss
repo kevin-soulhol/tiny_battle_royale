@@ -30,6 +30,8 @@ body{
         line-height: 0.8em;
         width: 100px;
         margin: 0;
+
+        
     }
 
 
@@ -97,7 +99,9 @@ main{
 @import './components/_index.scss';
 @import './components/_game.scss';
 @import './components/_about.scss';
+@import './components/_assistance.scss';
 @import './components/_footer.scss';
+@import './components/_404.scss';
 
 
 
@@ -108,4 +112,3 @@ main{
 @import './components/_logo.scss';
 @import './components/_displayday.scss';
 @import './components/_displayevent.scss';
-@import './components/_assistance.scss';

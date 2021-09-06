@@ -12,6 +12,7 @@ import HeaderGame from "../components/HeaderGame"
 
 import GameClass from "../classes/game.class"
 import Events from "../classes/events.json"
+import Layout from '../components/layout';
 
 const variants = {
     hidden: { scale: 0 },
@@ -98,7 +99,7 @@ const Game = ({ location }) => {
 
 
     return (
-        <div id="appGame">
+        <Layout className="appGame" header="false">
             <Seo title="Game" />
             <HeaderGame change={isNight} />
             {(!endGame) && (
@@ -161,16 +162,17 @@ const Game = ({ location }) => {
                             Relancer la partie
                         </button>
                         <Link
-                        to = "/"
-                            className="restart"
+                        to = "/game"
+                        className="restart"
+                        state={{ joueurs : players }}
                         >
                             Retourner au menu
                         </Link>
                     </div>
                 )
             }
-            <Footer />
-        </div>
+            
+        </Layout>
     );
 };
 

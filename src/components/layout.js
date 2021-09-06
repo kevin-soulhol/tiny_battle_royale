@@ -27,7 +27,7 @@ const Layout = ( props ) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        {(!props.header && (<Header siteTitle={data.site.siteMetadata?.title || `Title`} />))} 
         <main className = {(props.className ? props.className : "")}>{props.children}</main>
         <Footer></Footer>
     </>

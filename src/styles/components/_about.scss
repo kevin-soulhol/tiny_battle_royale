@@ -7,7 +7,13 @@
         width: 50%;
         letter-spacing: inherit;
         text-align: center;
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+        }
     }
+
+    
 
 
 
@@ -18,4 +24,12 @@
     padding: 1em;
     max-width: $containermax;
     margin: auto;
+
+    h4{
+        margin-top: 2em;
+    }
+
+    a{
+        color: $red;
+    }
 }

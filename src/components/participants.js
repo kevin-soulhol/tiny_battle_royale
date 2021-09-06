@@ -79,7 +79,7 @@ const Participants = () => {
 
 
     const delete_players = (index) => {
-        if (Participants.length > 2) {
+        if (Participants.length > autoPlayerStarter) {
             let newArr = [...Participants]
             newArr.splice(newArr.findIndex(item => item.index === index), 1)
             setParticipants(newArr)
@@ -145,6 +145,8 @@ const Participants = () => {
                         deleter={delete_players}
                         changerName={changeName}
                         openerImage={openImages}
+                        currentSelectedParticipants = {Participants.length}
+                        minParticipants = {autoPlayerStarter}
                     ></Players>
 
                 ))}

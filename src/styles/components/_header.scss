@@ -15,9 +15,15 @@ header{
                 display: flex;
                 flex-direction: row;
 
+                @media screen and (max-width: 535px) {
+                        margin:0px;
+
+                }
+
                 li{
                         margin:0px 3em;
                         transition: all 0.2s ease-in-out;
+                        min-width: max-content;
 
                         
 
