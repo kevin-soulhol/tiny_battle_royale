@@ -3,6 +3,7 @@ module.exports = {
     title: `Tiny Battle Royale`,
     description: `Amusez-vous avec ce simulateur de Battle Royale, type Jeux de la Faim (Hunger Game). Seul ou à plusieurs, choisissez vos participants et laissez-les se battre dans l'arène et subir des évènements aléatoires. Qui sera le vainqueur ? A vous de le découvrir en jeu.`,
     author: `Kévin Soulhol`,
+    siteUrl : `https://www.tinybattleroyale.kevin-soulhol.fr`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +27,26 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-gatsby-cloud`
+    `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Tiny Battle Royale`,
+        short_name: `Tiny Battle`,
+        start_url: `/`,
+        background_color: `#F27D16`,
+        theme_color: `#F27D16`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+        icons: [
+          {
+            src: `src/images/favicon-220x220.png`,
+            sizes: `220x220`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }

@@ -5,7 +5,7 @@ const Footer = () => {
 
     const getCopyright = () => {
         return (<span>
-            © {new Date().getFullYear()}, Kévin Soulhol - Atelier les Petites Choses | Illustrations par <a href="https://www.behance.net/viktormillergausa" target="_blank">Viktor Miller-Gausa</a> | version 1.0
+            © {new Date().getFullYear()}, Kévin Soulhol - Atelier les Petites Choses | Illustrations par <a href="https://www.behance.net/viktormillergausa" target="_blank">Viktor Miller-Gausa</a> | version 1.0 - Beta
         </span>)
     }
 

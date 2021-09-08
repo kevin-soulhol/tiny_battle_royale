@@ -15,14 +15,14 @@ const Assistance = () => {
     const [textButton, setTextButton] = useState("Envoyer")
     const [sended, setSended] = useState(false)
 
-    
+
     const send_mail = (event) => {
-        
+
         event.preventDefault()
 
         let form = event.target;
 
-        if(!sended){
+        if (!sended) {
 
             let formD = new FormData(form)
 
@@ -30,32 +30,32 @@ const Assistance = () => {
 
             axios({
                 method: "post",
-                url : 'https://www.tinybattleroyale.kevin-soulhol.fr/send_email.php',
-                data : formD
+                url: 'https://www.tinybattleroyale.kevin-soulhol.fr/send_email.php',
+                data: formD
             })
-            .then(function (response) {
-                
-                
-                if(response.data.bool){
-                    setTextButton("Message envoyé")
-                    setMessage("")
-                    setSended(true)
-                } else {
-                    setMessage(response.data.text)
-                    setTextButton("Recommencer")
-                }
-            })
-            .catch(function (err) {
-                // Error happened
-                console.log(err)
-                setMessage("Une erreur est survenue")
-                setTextButton("Recommencer")
-            });
+                .then(function (response) {
 
-            
+
+                    if (response.data.bool) {
+                        setTextButton("Message envoyé")
+                        setMessage("")
+                        setSended(true)
+                    } else {
+                        setMessage(response.data.text)
+                        setTextButton("Recommencer")
+                    }
+                })
+                .catch(function (err) {
+                    // Error happened
+                    console.log(err)
+                    setMessage("Une erreur est survenue")
+                    setTextButton("Recommencer")
+                });
+
+
         }
 
-        
+
     }
 
 
@@ -66,6 +66,16 @@ const Assistance = () => {
             <HeaderPresentation>Assistance</HeaderPresentation>
 
             <form method="post" onSubmit={send_mail}>
+
+                <h3>Un message à envoyer ?</h3>
+
+                <p>
+                    Un problème est survenu, une erreur à partager, un petit message de soutien à envoyer ? Vous êtes au bon endroit.
+                    <br />
+                    Remplissez le formulaire ci-dessous et envoyez-le. Nous essaierons d'y répondre aussi vite que possible.
+                </p>
+
+
                 <label>
                     Votre nom
                     <input type="text" name="fullname" id="name" />
@@ -82,7 +92,7 @@ const Assistance = () => {
                     Message
                     <textarea name="message" id="message" rows="5" />
                 </label>
-                
+
                 <small>{message}</small>
 
                 <button type="submit">{textButton}</button>
