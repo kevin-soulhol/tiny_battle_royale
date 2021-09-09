@@ -76,7 +76,7 @@ function Seo({ description, lang, meta, title }) {
 Seo.defaultProps = {
   lang: `fr`,
   meta: ['jeu', 'battle royale', 'jeu en ligne'],
-  description: ``,
+  description: `Amusez-vous avec ce simulateur de Battle Royale, type Jeux de la Faim (Hunger Game). Seul ou à plusieurs, choisissez vos participants et laissez-les se battre dans l'arène et subir des évènements aléatoires. Qui sera le vainqueur ? A vous de le découvrir en jeu.`,
 }
 
 Seo.propTypes = {

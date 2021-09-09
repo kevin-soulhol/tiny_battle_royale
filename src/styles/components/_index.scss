@@ -131,7 +131,6 @@
             flex-direction: column;
 
             h3{
-                text-align: center;
                 text-align: left;
                 padding: 0;
             }
@@ -148,7 +147,13 @@
         font-size: 1em;
         padding-right: 2em;
         width: 100%;
+        max-width: 500px;
         margin: 0;
+
+        @media screen and (max-width: 900px) {
+            font-size: 1.2em;
+            text-align: justify;
+        }
 
     }
 
@@ -207,9 +212,10 @@
     padding-bottom: 6em;
     max-width: $containermax;
     margin: auto;
+    text-align: justify;
 
     @media screen and (max-width: 700px) {
-        padding-top: 1em;
+        padding-top: 4em;
 
 }
 

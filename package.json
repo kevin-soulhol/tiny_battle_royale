@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-tiny-battle-royale",
   "private": true,
   "description": "Un jeu permettant de faire vivre des aventures rapides et aléatoires à vos personnages, dans un Battle Royale",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Kevin Soulhol <contact@kevin-soulhol.fr>",
   "dependencies": {
     "framer": "^1.3.2",
@@ -13,6 +13,7 @@
     "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-manifest": "^3.6.0",
     "gatsby-plugin-offline": "^4.10.0",
+    "gatsby-plugin-pwainstall": "^1.1.2",
     "gatsby-plugin-react-helmet": "^4.6.0",
     "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-sharp": "^3.6.0",

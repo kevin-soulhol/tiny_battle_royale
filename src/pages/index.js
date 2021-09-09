@@ -23,7 +23,7 @@ const IndexPage = () => (
       </h2>
 
       <div className="ligne_cta">
-        <h3>Choisissez les participants puis lancez-les dans l'arène. Survivront-ils ? Combien de temps ?<br /> Tout peut arriver dans Tiny Battle Royale !</h3>
+        <h3>Choisissez les participants puis lancez-les dans l'arène. Survivront-ils ? Combien de temps ? Tout peut arriver dans Tiny Battle Royale !</h3>
         <button><a href="#section_participants">JOUER</a></button>
       </div>
     </section>

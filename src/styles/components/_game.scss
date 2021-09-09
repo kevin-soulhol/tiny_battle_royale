@@ -12,6 +12,16 @@
         margin:auto;
         margin-top: 3em;
         background-color: $red;
+
+        :hover{
+
+            color: red;
+            @media screen and (max-width: 900px) {
+                transform: scale(1);
+            }
+        }
+
+        
     }
 
     .night{

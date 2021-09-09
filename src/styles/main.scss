@@ -18,6 +18,8 @@ $containermax : 1000px;
 
 body{
     font-family: $main_font;
+    max-width: 100vw;
+    overflow: hidden;
 
     h1{
         font-weight: 900;
@@ -51,6 +53,10 @@ body{
         width: 100%;
         text-align: left;
         color: $red;
+
+        @media screen and (max-width: 900px) {
+            font-size: 1.5em;
+        }
     }
 
 

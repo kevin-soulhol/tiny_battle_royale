@@ -33,20 +33,28 @@ module.exports = {
       options: {
         name: `Tiny Battle Royale`,
         short_name: `Tiny Battle`,
+        description : `L'application de simulation de Battle Royale.`,
+        lang: `fr`,
         start_url: `/`,
         background_color: `#F27D16`,
         theme_color: `#F27D16`,
-        display: `standalone`,
-        icon: `src/images/favicon.png`,
+        display: `fullscreen`,
+        icon: `src/images/favicons/favicon.png`,
         icons: [
           {
-            src: `src/images/favicon-220x220.png`,
-            sizes: `220x220`,
+            src: `src/images/favicons/favicon_512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/favicons/favicon_192x192.png`,
+            sizes: `192x192`,
             type: `image/png`,
           },
         ],
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-pwainstall`,
   ],
 }

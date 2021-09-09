@@ -162,7 +162,7 @@ const Game = ({ location }) => {
                             Relancer la partie
                         </button>
                         <Link
-                        to = "/game"
+                        to = "/"
                         className="restart"
                         state={{ joueurs : players }}
                         >

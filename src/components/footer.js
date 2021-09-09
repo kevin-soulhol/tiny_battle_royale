@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "gatsby"
 
+import AddToHomeScreen from 'gatsby-plugin-pwainstall'
+
 const Footer = () => {
 
     const getCopyright = () => {
@@ -16,7 +18,13 @@ const Footer = () => {
             <div>
                 <div className="col">
                     <Link to="/about">A propos</Link>
+
                     <Link to="/assistance">Assistance</Link>
+
+                    <AddToHomeScreen suspend='0' acceptedUri='/' dismmissedUri='/'>
+                        Installer l'application
+                    </AddToHomeScreen>
+
                     <Link className="btn_paypal" to="https://www.paypal.com/donate?hosted_button_id=9JG996KBXZVE6" target="_blank" rel="noopener noreferrer">M'offrir un café ?</Link>
                 </div>
             </div>
