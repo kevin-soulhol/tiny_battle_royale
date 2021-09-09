@@ -25,7 +25,7 @@ const Footer = () => {
                         Installer l'application
                     </AddToHomeScreen>
 
-                    <Link className="btn_paypal" to="https://www.paypal.com/donate?hosted_button_id=9JG996KBXZVE6" target="_blank" rel="noopener noreferrer">M'offrir un café ?</Link>
+                    <Link className="btn_paypal" to="https://www.paypal.com/donate?hosted_button_id=9JG996KBXZVE6" target="_blank" rel="noreferrer">M'offrir un café ?</Link>
                 </div>
             </div>
             <div className="copyright">

@@ -70,6 +70,7 @@ function Seo({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     />
+      
   )
 }
 

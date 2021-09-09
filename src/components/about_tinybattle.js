@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StaticQuery, useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const About_tinybattle = () => {
 

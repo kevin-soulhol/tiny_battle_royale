@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { StaticQuery, useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import HeaderGame from "../components/HeaderGame"
 import HeaderPresentation from "../components/header_presentation"
 
 const About = () => {

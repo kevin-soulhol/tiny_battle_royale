@@ -6,7 +6,6 @@ import DisplayDay from "../components/mini_components/displayDay"
 import DisplayEvent from "../components/mini_components/displayEvent"
 
 import Seo from "../components/seo"
-import Footer from "../components/footer"
 import HeaderGame from "../components/HeaderGame"
 
 
@@ -14,10 +13,6 @@ import GameClass from "../classes/game.class"
 import Events from "../classes/events.json"
 import Layout from '../components/layout';
 
-const variants = {
-    hidden: { scale: 0 },
-    visible: { scale: 1 },
-}
 
 
 const Game = ({ location }) => {
@@ -121,7 +116,7 @@ const Game = ({ location }) => {
             ))}
             {
                 !endGame && isNight && (lastDead?.map((participant) => (
-                    (participant.hidden == false) &&
+                    (participant.hidden === false) &&
                     <DisplayEvent
                         player={participant}
                         img={participant.fluid}
