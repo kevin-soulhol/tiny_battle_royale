@@ -33,6 +33,9 @@ jobs:
 
       - name: Add known hosts
         run: ssh-keyscan -H ${{ secrets.OVH_SERVER_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Check SSH key fingerprint
+        run: ssh-keygen -l -f ~/.ssh/id_rsa
       
       - name: Check directory permissions
         run: ssh ${{ secrets.OVH_SERVER_USER }}@${{ secrets.OVH_SERVER_HOST }} "ls -la /var/www/"
