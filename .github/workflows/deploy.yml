@@ -23,7 +23,7 @@ jobs:
         run: ls -la && npm install
 
       - name: Build project
-        run: gatsby build
+        run: npx gatsby build
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
